@@ -10,33 +10,44 @@ body{
     align-items: center;
     justify-content:center ;
     min-height:100vh ;
-    background-color: rgb(212, 193, 239) ;
+    background: linear-gradient(45deg, #f5f5f5, #d9f7f6);
 }
 .container{
-    background-color: rgb(201, 236, 220);
-    width: px;
+    background-color: #fff;
+    width:400 px;
     border-radius: 8px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Shadow for a pop-out effect */
+    padding: 20px;
+    text-align: center;
     
 }
 .container h2{
-    font-size: 29px;
-    font-weight:560 ;
-    border-bottom: 0.5px solid gray;
-    padding: 18px 25px;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 15px 25px;
+    color: #333;
+    background-color:  #FF4081; /* Fun header color */
+    border-radius: 10px;
+    
 }
 .container .content{
-    padding: 10px ;
+    padding: none ;
     margin: 25px 20px 35px;
 }
 .content .word {
-    font-size: 30px;
-    font-weight: 530;
+    font-size: 40px;
+    font-weight: 600;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 20px;
-    margin-right: -25px;
+    letter-spacing: 10px;
+    color: #6A1B9A;
+    margin-bottom: 15px;
 }
 .content .details{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+
     margin: 25px 0px 20px ;
 }
 /* .hint:not(span){
@@ -51,34 +62,65 @@ body{
     color: rgb(222, 45, 45);
 }
 input{
-    width:100% ;
+    width: 100%;
     height: 50px;
     font-size: 28px;
-    color: rgb(81, 113, 240) ;
-    /* outline: none;  */
-    padding: px 16px ;
-    border: 1px solid gray;
+    color: #333;
+    padding: 0 16px;
+    border: 2px solid #FF8F56; /* Border color */
     border-radius: 6px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
 }
+input:focus {
+    border-color: #e74d3f; /* Focus color */
+    outline: none;
+}
+
 .buttons{
     display: flex;
-    justify-content: space-between ;
-    margin-top: 25px ;
+    justify-content: space-between;
+    margin-top: 25px;
+
 }
 .buttons button{
     border: none;
     outline: none;
-    width: calc(100% / 2 - 8px);
-    padding: 15px 0 ;
-    border-radius:5px;
+    width: 48%;
+    padding: 15px 0;
+    border-radius: 8px;
     font-size: 17px;
     font-weight: 550;
+    transition: all 0.3s ease;
 }
 .buttons .refrech{
     background-color: bisque;
     color: rgb(0, 0, 0);
 } 
-.buttons .check{
-    background-color: rgb(103, 233, 138);
+.buttons .check {
+    background-color: #4CAF50; /* Bright green */
     color: #fff;
+}
+
+.buttons button:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+/* Score Styling */
+.score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #FF4081; /* Fun pink color */
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.score:hover {
+    transform: scale(1.1);
 }
