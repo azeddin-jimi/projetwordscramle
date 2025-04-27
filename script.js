@@ -4,6 +4,13 @@ refrechbtn= document.querySelector('.refrech');
 checkbtn=document.querySelector('.check');
 inputbox= document.querySelector("input")
 let  wordcorrect ;
+
+const successSound = new Audio('yeyyy.mp3');          //fichier      
+const errorSound = new Audio('buzzer-error.mp3');
+const clickSound = new Audio('mouse-click-by-ek6_VR0O6PL.mp3');
+const timeSound = new Audio('10-sec-timer.mp3');
+
+
 timetext = document.querySelector(".time b")
 let timer
 const Ftimer = (maxtime)=>{ // maxtimer > parametre li kaymtl lwa9t
@@ -11,6 +18,9 @@ const Ftimer = (maxtime)=>{ // maxtimer > parametre li kaymtl lwa9t
     timer = setInterval(()=> {
         if (maxtime > 0 ){
             maxtime--;
+            if (maxtime ==10){       //this pour timer
+                playtimeSound();
+            }
             return timetext.innerText = maxtime;
         }
         clearInterval(timer); // when kaywssal l 0 kayw9af
@@ -54,15 +64,49 @@ const checkword = ()=>{
     // console.log(worduser)
 
     if (wordcorrect===worduser){
+        playSuccessSound();
         alert(`bravoo! le mot correct est ${wordcorrect} .  `);
         intGam();
     }else if (!worduser){
+        playErrorSound();
         return alert(`veuillez entrer un mot!!`);
     }else {
+        playErrorSound();
         alert(`désolé, le mot ${worduser} n'est pas le mot correct `);
     }
     
 }
 
-refrechbtn.addEventListener("click",intGam);
-checkbtn.addEventListener("click",checkword);
+
+
+
+
+
+// son sur des action specifique
+function playSuccessSound() {
+    successSound.play();
+}
+
+function playErrorSound() {
+    errorSound.play();
+}
+
+function playClickSound() {
+    clickSound.play();
+}
+
+function playtimeSound() {
+    timeSound.play();
+}
+
+
+
+checkbtn.addEventListener("click", () => {
+    checkword();
+    playClickSound(); // Play sound of click  when user click check
+});
+
+refrechbtn.addEventListener("click", () => {
+    intGam();
+    playClickSound(); // Play .. when user clicks refresh
+});
