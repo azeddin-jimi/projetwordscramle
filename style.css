@@ -17,7 +17,7 @@ body{
     width:400 px;
     border-radius: 8px;
     border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Shadow for a pop-out effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
     padding: 20px;
     text-align: center;
     
@@ -27,7 +27,7 @@ body{
     font-weight: 600;
     padding: 15px 25px;
     color: #333;
-    background-color:  #FF4081; /* Fun header color */
+    background-color:  #FF4081; 
     border-radius: 10px;
     
 }
@@ -67,13 +67,13 @@ input{
     font-size: 28px;
     color: #333;
     padding: 0 16px;
-    border: 2px solid #FF8F56; /* Border color */
+    border: 2px solid #FF8F56; 
     border-radius: 6px;
     margin-bottom: 15px;
     transition: all 0.3s ease;
 }
 input:focus {
-    border-color: #e74d3f; /* Focus color */
+    border-color: #e74d3f; 
     outline: none;
 }
 
@@ -98,12 +98,12 @@ input:focus {
     color: rgb(0, 0, 0);
 } 
 .buttons .check {
-    background-color: #4CAF50; /* Bright green */
+    background-color: #4CAF50; 
     color: #fff;
 }
 
 .buttons button:hover {
-    transform: scale(1.05); /* Hover effect */
+    transform: scale(1.05); 
 }
 
 /* Score Styling */
@@ -111,7 +111,7 @@ input:focus {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #FF4081; /* Fun pink color */
+    background-color: #FF4081; 
     padding: 15px 25px;
     border-radius: 12px;
     font-size: 24px;
